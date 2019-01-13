@@ -28,5 +28,13 @@
     "ipld-in-memory": "^2.0.0",
     "pull-stream": "^3.6.9",
     "pull-stream-to-async-iterator": "^1.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanshaw/ipfs-only-hash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanshaw/ipfs-only-hash/issues"
+  },
+  "homepage": "https://github.com/alanshaw/ipfs-only-hash#readme"
 }
