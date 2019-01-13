@@ -18,7 +18,7 @@ npm i ipfs-hash
 const Hash = require('ipfs-hash')
 const data = Buffer.from('hello world!')
 const hash = await Hash.of(data)
-console.log(hash)
+console.log(hash) // QmTp2hEo8eXRp6wg7jXv1BLCMh5a4F3B7buAUZNZUu772j
 ```
 
 ## API
