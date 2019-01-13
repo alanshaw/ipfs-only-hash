@@ -1,6 +1,6 @@
-# ipfs-hash
+# ipfs-only-hash
 
-[![Build Status](https://travis-ci.org/alanshaw/ipfs-hash.svg?branch=master)](https://travis-ci.org/alanshaw/ipfs-hash) [![dependencies Status](https://david-dm.org/alanshaw/ipfs-hash/status.svg)](https://david-dm.org/alanshaw/ipfs-hash) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/alanshaw/ipfs-only-hash.svg?branch=master)](https://travis-ci.org/alanshaw/ipfs-only-hash) [![dependencies Status](https://david-dm.org/alanshaw/ipfs-only-hash/status.svg)](https://david-dm.org/alanshaw/ipfs-only-hash) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > Just enough code to calculate the IPFS hash for some data
 
@@ -9,13 +9,13 @@ Calculate the IPFS hash for some data without having to install or run an IPFS n
 ## Install
 
 ```sh
-npm i ipfs-hash
+npm i ipfs-only-hash
 ```
 
 ## Usage
 
 ```js
-const Hash = require('ipfs-hash')
+const Hash = require('ipfs-only-hash')
 const data = Buffer.from('hello world!')
 const hash = await Hash.of(data)
 console.log(hash) // QmTp2hEo8eXRp6wg7jXv1BLCMh5a4F3B7buAUZNZUu772j
@@ -50,7 +50,7 @@ Calculate the hash for the provided input.
 
 ## Contribute
 
-Feel free to dive in! [Open an issue](https://github.com/alanshaw/ipfs-hash/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/alanshaw/ipfs-only-hash/issues/new) or submit PRs.
 
 ## License
 
