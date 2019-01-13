@@ -1,6 +1,6 @@
 # ipfs-hash
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/alanshaw/ipfs-hash.svg?branch=master)](https://travis-ci.org/alanshaw/ipfs-hash) [![dependencies Status](https://david-dm.org/alanshaw/ipfs-hash/status.svg)](https://david-dm.org/alanshaw/ipfs-hash) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > Just enough code to calculate the IPFS hash for some data
 
