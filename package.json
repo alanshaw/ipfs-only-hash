@@ -24,7 +24,7 @@
     "cids": "^0.5.7",
     "get-iterator": "^1.0.1",
     "ipfs-unixfs-importer": "^0.38.0",
-    "ipld": "^0.20.2",
+    "ipld": "^0.22.0",
     "ipld-in-memory": "^2.0.0",
     "pull-stream": "^3.6.9",
     "pull-stream-to-async-iterator": "^1.0.1"
