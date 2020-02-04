@@ -15,19 +15,16 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "^1.1.0",
-    "ipfs": "^0.34.0-rc.0",
+    "cids": "^0.7.3",
+    "ipfs": "^0.41.0-rc.0",
+    "it-all": "^1.0.1",
     "nyc": "^13.1.0",
     "standard": "^12.0.1"
   },
   "dependencies": {
-    "async-iterator-to-pull-stream": "^1.1.0",
-    "cids": "^0.5.7",
-    "get-iterator": "^1.0.1",
-    "ipfs-unixfs-importer": "^0.38.0",
-    "ipld": "^0.20.2",
-    "ipld-in-memory": "^2.0.0",
-    "pull-stream": "^3.6.9",
-    "pull-stream-to-async-iterator": "^1.0.1"
+    "ipfs-unixfs-importer": "^0.44.1",
+    "ipld": "^0.25.3",
+    "ipld-in-memory": "^3.0.1"
   },
   "repository": {
     "type": "git",

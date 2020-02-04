@@ -2,12 +2,19 @@ import test from 'ava'
 import fs from 'fs'
 import path from 'path'
 import os from 'os'
-import Ipfs from 'ipfs'
+import IPFS from 'ipfs'
 import CID from 'cids'
+import all from 'it-all'
 import Hash from '.'
 
 test('should calculate the IPFS hash of a buffer', async t => {
   const data = Buffer.from('hello world\n')
+  const hash = await Hash.of(data)
+  t.is(hash, 'QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o')
+})
+
+test('should calculate the IPFS hash of a string', async t => {
+  const data = 'hello world\n'
   const hash = await Hash.of(data)
   t.is(hash, 'QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o')
 })
@@ -20,16 +27,12 @@ test('should calculate the IPFS hash of an iterator', async t => {
 
 test('should produce the same hash as IPFS', async t => {
   const data = Buffer.from('TEST' + Date.now())
-  const ipfs = new Ipfs({ repo: path.join(os.tmpdir(), `${Date.now()}`) })
+  const ipfs = await IPFS.create({ repo: path.join(os.tmpdir(), `${Date.now()}`) })
 
-  await new Promise((resolve, reject) => {
-    ipfs.on('ready', resolve).on('error', reject)
-  })
-
-  const files = await ipfs.add(data)
+  const files = await all(ipfs.add(data))
   const hash = await Hash.of(data)
 
-  t.is(files[0].hash, hash)
+  t.is(files[0].cid.toString(), hash)
 })
 
 test('should take CID version option', async t => {
