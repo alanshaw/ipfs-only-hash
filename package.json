@@ -4,7 +4,8 @@
   "description": "Just enough code to calculate the IPFS hash for some data",
   "main": "index.js",
   "scripts": {
-    "test": "standard && nyc --reporter=lcov --reporter=text ava --verbose"
+    "test": "npm run lint && nyc --reporter=lcov --reporter=text ava --verbose",
+    "lint": "standard"
   },
   "keywords": [
     "ipfs",
@@ -14,12 +15,12 @@
   "author": "Alan Shaw",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^1.1.0",
+    "ava": "^3.2.0",
     "cids": "^0.7.3",
     "ipfs": "^0.41.0-rc.0",
     "it-all": "^1.0.1",
-    "nyc": "^13.1.0",
-    "standard": "^12.0.1"
+    "nyc": "^15.0.0",
+    "standard": "^14.3.1"
   },
   "dependencies": {
     "ipfs-unixfs-importer": "^0.44.1",

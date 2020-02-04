@@ -1,11 +1,11 @@
-import test from 'ava'
-import fs from 'fs'
-import path from 'path'
-import os from 'os'
-import IPFS from 'ipfs'
-import CID from 'cids'
-import all from 'it-all'
-import Hash from '.'
+const test = require('ava')
+const fs = require('fs')
+const path = require('path')
+const os = require('os')
+const IPFS = require('ipfs')
+const CID = require('cids')
+const all = require('it-all')
+const Hash = require('.')
 
 test('should calculate the IPFS hash of a buffer', async t => {
   const data = Buffer.from('hello world\n')
@@ -14,12 +14,14 @@ test('should calculate the IPFS hash of a buffer', async t => {
 })
 
 test('should calculate the IPFS hash of a string', async t => {
+  // TODO: remove when merged: https://github.com/ipld/ipld-in-memory/pull/7
+  await new Promise(resolve => setTimeout(resolve))
   const data = 'hello world\n'
   const hash = await Hash.of(data)
   t.is(hash, 'QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o')
 })
 
-test('should calculate the IPFS hash of an iterator', async t => {
+test('should calculate the IPFS hash of an async iterator', async t => {
   const stream = fs.createReadStream(path.join(__dirname, 'hello'))
   const hash = await Hash.of(stream)
   t.is(hash, 'QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o')
