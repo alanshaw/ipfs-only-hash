@@ -14,8 +14,6 @@ test('should calculate the IPFS hash of a buffer', async t => {
 })
 
 test('should calculate the IPFS hash of a string', async t => {
-  // TODO: remove when merged: https://github.com/ipld/ipld-in-memory/pull/7
-  await new Promise(resolve => setTimeout(resolve))
   const data = 'hello world\n'
   const hash = await Hash.of(data)
   t.is(hash, 'QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o')
