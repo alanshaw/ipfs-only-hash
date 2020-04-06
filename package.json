@@ -23,8 +23,8 @@
     "standard": "^14.3.1"
   },
   "dependencies": {
-    "ipfs-unixfs-importer": "^0.44.1",
-    "ipld": "^0.25.3",
+    "ipfs-unixfs-importer": ">= 0.44.1",
+    "ipld": ">= 0.25.3",
     "ipld-in-memory": "^3.0.2"
   },
   "repository": {
