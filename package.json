@@ -23,9 +23,9 @@
     "standard": "^14.3.1"
   },
   "dependencies": {
-    "ipfs-unixfs-importer": "^0.44.1",
-    "ipld": "^0.25.3",
-    "ipld-in-memory": "^3.0.2"
+    "ipfs-unixfs-importer": "^2",
+    "ipld": "^0",
+    "ipld-in-memory": "^4"
   },
   "repository": {
     "type": "git",
