@@ -1,6 +1,6 @@
 {
   "name": "ipfs-only-hash",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Just enough code to calculate the IPFS hash for some data",
   "main": "index.js",
   "bin": {
