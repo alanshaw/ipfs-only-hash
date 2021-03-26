@@ -18,6 +18,7 @@
   "author": "Alan Shaw",
   "license": "MIT",
   "devDependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.1",
     "ava": "^3.2.0",
     "cids": "^1.1.6",
     "ipfs": "^0.54.4",
