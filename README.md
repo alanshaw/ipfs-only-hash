@@ -4,7 +4,11 @@
 
 > Just enough code to calculate the IPFS hash for some data
 
-Calculate the IPFS hash for some data without having to install or run an IPFS node.
+Calculate the IPFS hash for some data without having to install or run an IPFS node. Try it out with npx:
+
+```
+npx ipfs-only-hash <path to file>
+```
 
 ## Install
 
@@ -13,6 +17,17 @@ npm i ipfs-only-hash
 ```
 
 ## Usage
+
+From the command line
+
+```sh
+ipfs-only-hash <file>
+
+# or pipe in 
+echo "hello world" | ipfs-only-hash
+```
+
+As a library
 
 ```js
 const Hash = require('ipfs-only-hash')
