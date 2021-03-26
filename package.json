@@ -3,6 +3,9 @@
   "version": "2.0.1",
   "description": "Just enough code to calculate the IPFS hash for some data",
   "main": "index.js",
+  "bin": {
+    "ipfs-only-hash": "cli.js"
+  },
   "scripts": {
     "test": "npm run lint && nyc --reporter=lcov --reporter=text ava --verbose",
     "lint": "standard"
@@ -25,7 +28,8 @@
   "dependencies": {
     "ipfs-unixfs-importer": "^0.44.1",
     "ipld": "^0.25.3",
-    "ipld-in-memory": "^3.0.2"
+    "ipld-in-memory": "^3.0.2",
+    "meow": "^9.0.0"
   },
   "repository": {
     "type": "git",
