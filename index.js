@@ -1,6 +1,9 @@
 const { importer } = require('ipfs-unixfs-importer')
-const IPLD = require('ipld')
-const inMemory = require('ipld-in-memory')
+
+const block = {
+  get: async cid => { throw new Error(`unexpected block API get for ${cid}`) },
+  put: async () => { throw new Error('unexpected block API put') }
+}
 
 exports.of = async (content, options) => {
   options = options || {}
@@ -10,10 +13,8 @@ exports.of = async (content, options) => {
     content = new TextEncoder().encode(content)
   }
 
-  const ipld = await inMemory(IPLD)
   let lastCid
-
-  for await (const { cid } of importer([{ content }], ipld, options)) {
+  for await (const { cid } of importer([{ content }], block, options)) {
     lastCid = cid
   }
 
