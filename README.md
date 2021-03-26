@@ -1,6 +1,6 @@
 # ipfs-only-hash
 
-[![Build Status](https://travis-ci.org/alanshaw/ipfs-only-hash.svg?branch=master)](https://travis-ci.org/alanshaw/ipfs-only-hash) [![dependencies Status](https://david-dm.org/alanshaw/ipfs-only-hash/status.svg)](https://david-dm.org/alanshaw/ipfs-only-hash) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/alanshaw/ipfs-only-hash.svg?branch=master)](https://travis-ci.org/alanshaw/ipfs-only-hash) [![dependencies Status](https://status.david-dm.org/gh/alanshaw/ipfs-only-hash.svg)](https://david-dm.org/alanshaw/ipfs-only-hash) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > Just enough code to calculate the IPFS hash for some data
 
@@ -31,7 +31,7 @@ As a library
 
 ```js
 const Hash = require('ipfs-only-hash')
-const data = Buffer.from('hello world!')
+const data = 'hello world!'
 const hash = await Hash.of(data)
 console.log(hash) // QmTp2hEo8eXRp6wg7jXv1BLCMh5a4F3B7buAUZNZUu772j
 ```
@@ -46,7 +46,7 @@ const Hash = require('ipfs-only-hash')
 
 Calculate the hash for the provided input.
 
-* `input` (`Buffer|string|AsyncIterable<Buffer>`): The input bytes to calculate the IPFS hash for. Note that Node.js readable streams are async iterable!
+* `input` (`string|Uint8Array|AsyncIterable<Uint8Array>`): The input bytes to calculate the IPFS hash for. Note that Node.js readable streams are async iterable!
 * `options` (`Object`): Optional options passed directly to the `ipfs-unixfs-importer` module. See the [API docs](https://github.com/ipfs/js-ipfs-unixfs-importer#api) for possible values.
 
 ## Contribute

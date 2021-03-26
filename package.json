@@ -19,16 +19,15 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "^3.2.0",
-    "cids": "^0.7.3",
-    "ipfs": "^0.41.0-rc.0",
-    "it-all": "^1.0.1",
+    "cids": "^1.1.6",
+    "ipfs": "^0.54.4",
     "nyc": "^15.0.0",
-    "standard": "^14.3.1"
+    "standard": "^16.0.3"
   },
   "dependencies": {
-    "ipfs-unixfs-importer": "^0.44.1",
-    "ipld": "^0.25.3",
-    "ipld-in-memory": "^3.0.2",
+    "ipfs-unixfs-importer": "^7.0.1",
+    "ipld": "^0.29.0",
+    "ipld-in-memory": "^8.0.0",
     "meow": "^9.0.0"
   },
   "repository": {

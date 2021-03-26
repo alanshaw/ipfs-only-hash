@@ -4,7 +4,6 @@ const path = require('path')
 const os = require('os')
 const IPFS = require('ipfs')
 const CID = require('cids')
-const all = require('it-all')
 const Hash = require('.')
 
 test('should calculate the IPFS hash of a buffer', async t => {
@@ -29,10 +28,10 @@ test('should produce the same hash as IPFS', async t => {
   const data = Buffer.from('TEST' + Date.now())
   const ipfs = await IPFS.create({ repo: path.join(os.tmpdir(), `${Date.now()}`) })
 
-  const files = await all(ipfs.add(data))
+  const { cid } = await ipfs.add(data)
   const hash = await Hash.of(data)
 
-  t.is(files[0].cid.toString(), hash)
+  t.is(cid.toString(), hash)
 })
 
 test('should take CID version option', async t => {
