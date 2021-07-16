@@ -26,7 +26,7 @@
     "standard": "^16.0.3"
   },
   "dependencies": {
-    "ipfs-unixfs-importer": "^7.0.1",
+    "ipfs-unixfs-importer": "^8.0.1",
     "meow": "^9.0.0"
   },
   "repository": {
